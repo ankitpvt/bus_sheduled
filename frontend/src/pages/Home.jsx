@@ -7,7 +7,7 @@ function Home() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    axios.get(`http://localhost:5000/buses`).then((response) => {
+    axios.get(`https://bus-sheduled-1.onrender.com/buses`).then((response) => {
       setBuses(response.data);
     });
   }, []);

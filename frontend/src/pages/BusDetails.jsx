@@ -9,7 +9,7 @@ function BusDetails() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    axios.get(`http://localhost:5000/buses/${id}`).then((response) => {
+    axios.get(`https://bus-sheduled-1.onrender.com/buses/${id}`).then((response) => {
       setBus(response.data);
     });
   }, [id]);

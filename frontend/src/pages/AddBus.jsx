@@ -20,7 +20,7 @@ function AddBus() {
       halfFare: Number(halfFare),
       timings: timings.split(',').map(time => time.trim()),
     };
-    await axios.post('http://localhost:5000/buses', busData);
+    await axios.post('https://bus-sheduled-1.onrender.com/buses', busData);
     navigate('/');
   };
 
