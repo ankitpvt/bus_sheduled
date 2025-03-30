@@ -1,0 +1,107 @@
+/* AddBus Page - Modern Glassmorphic Design */
+.add-bus-container {
+    max-width: 480px;
+    margin: 50px auto;
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Title Styling */
+.add-bus-title {
+    font-size: 26px;
+    font-weight: bold;
+    color: rgb(145, 255, 0); /* Red text color */
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-shadow: 1px 1px 2px rgba(255, 0, 0, 0.5);
+}
+
+/* Form Layout */
+.add-bus-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Input Fields */
+.input-field {
+    width: 100%;
+    padding: 14px;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.2);
+    color: rgb(0, 0, 255) !important; 
+    outline: none;
+    transition: all 0.3s ease-in-out;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* Placeholder text should also be red */
+.input-field::placeholder {
+    color: rgba(0, 13, 255, 0.6) !important;
+    font-weight: normal;
+}
+
+/* Ensure text remains red when typing */
+.input-field:focus {
+    background: rgba(255, 255, 255, 0.3);
+    box-shadow: 0 0 10px rgba(255, 0, 0, 0.6);
+    color: rgb(236, 98, 98) !important; /* Force red text */
+}
+
+/* Buttons */
+.add-bus-button, .back-button {
+    width: 100%;
+    padding: 14px;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    letter-spacing: 1px;
+}
+
+/* Add Bus Button */
+.add-bus-button {
+    background: red;
+    color: white;
+    border: none;
+}
+
+.add-bus-button:hover {
+    background: darkred;
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(255, 0, 0, 0.6);
+}
+
+/* Back Button */
+.back-button {
+    background: white;
+    color: red;
+    border: 2px solid red;
+    margin-top: 10px;
+}
+
+.back-button:hover {
+    background: red;
+    color: white;
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(255, 0, 0, 0.6);
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .add-bus-container {
+        max-width: 90%;
+        padding: 20px;
+    }
+}

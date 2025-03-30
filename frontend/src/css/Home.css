@@ -1,0 +1,222 @@
+/* General styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #121212;
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+/* Navbar (Reduced Height) */
+.navbar {
+    width: 100%;
+    background: #1e1e1e;
+    padding: 10px 15px; /* Reduced padding */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 3px 10px rgba(255, 255, 255, 0.1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    border-bottom: 2px solid #ff5733;
+}
+
+/* Terminal Name (Centered) */
+.terminal-name {
+    font-size: 24px; /* Reduced size */
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+    flex-grow: 1;
+    background-image: linear-gradient(45deg, red, orange, yellow, green, blue, indigo, violet);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: rainbow 3s infinite linear;
+}
+
+/* Rainbow Animation */
+@keyframes rainbow {
+    0% { background-position: 0%; }
+    100% { background-position: 400%; }
+}
+
+/* Navbar Buttons */
+.nav-buttons {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    padding: 0 10px;
+}
+
+/* Add New Bus Button (Left Side) */
+.add-bus-btn {
+    margin-right: auto; /* Move left */
+}
+
+/* Contact Button (Right Side) */
+.contact-btn {
+    margin-left: auto; /* Move right */
+    background: #ff9800;
+}
+
+.contact-btn:hover {
+    background: #e68900;
+}
+
+/* General Button Styles */
+.nav-btn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 8px 12px; /* Reduced padding */
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+    font-size: 14px; /* Slightly smaller */
+}
+
+.nav-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Main container */
+.container {
+    max-width: 700px;
+    width: 90%;
+    background: #1e1e1e;
+    padding: 20px; /* Reduced padding */
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+    text-align: center;
+    margin-top: 80px; /* Adjusted margin for smaller navbar */
+}
+
+/* Heading */
+.title {
+    color: #ffcc00;
+    font-size: 26px; /* Slightly reduced size */
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+/* Scrollable Bus List */
+.bus-list-container {
+    max-height: 320px; /* Reduced height */
+    overflow-y: auto;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 8px;
+    background: #222;
+}
+
+/* Custom Scrollbar */
+.bus-list-container::-webkit-scrollbar {
+    width: 8px;
+}
+
+.bus-list-container::-webkit-scrollbar-track {
+    background: #333;
+    border-radius: 10px;
+}
+
+.bus-list-container::-webkit-scrollbar-thumb {
+    background: #ffcc00;
+    border-radius: 10px;
+}
+
+.bus-list-container::-webkit-scrollbar-thumb:hover {
+    background: #e6b800;
+}
+
+/* Bus list */
+.bus-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Bus Item */
+.bus-item {
+    background: #333;
+    padding: 12px; /* Reduced padding */
+    margin: 8px 0; /* Reduced margin */
+    border-radius: 8px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    transition: background 0.3s ease-in-out, transform 0.2s;
+    font-size: 16px; /* Slightly smaller */
+    font-weight: 500;
+    box-shadow: 0 3px 6px rgba(255, 255, 255, 0.1);
+}
+
+.bus-item:hover {
+    background: #444;
+    transform: translateY(-2px);
+}
+
+/* Bus Symbol */
+.bus-symbol {
+    font-size: 28px; /* Slightly smaller */
+}
+
+/* Bus Info */
+.bus-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.bus-route {
+    font-weight: bold;
+    color: #ffcc00;
+}
+
+.bus-fare {
+    color: #00c853;
+    font-weight: bold;
+}
+
+.bus-time {
+    font-size: 16px;
+    color: #ffcc00;
+    font-weight: bold;
+    margin-top: 5px;
+  }
+  
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        text-align: center;
+        padding: 8px;
+    }
+
+    .nav-buttons {
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+        margin-top: 5px;
+    }
+
+    .container {
+        width: 95%;
+    }
+
+    .nav-btn {
+        width: auto;
+    }
+
+    .bus-item {
+        flex-direction: column;
+        text-align: center;
+    }
+}

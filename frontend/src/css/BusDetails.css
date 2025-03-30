@@ -1,0 +1,150 @@
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #121212;
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Bus Details Container */
+.bus-details-container {
+    max-width: 600px;
+    width: 90%;
+    background: rgba(30, 30, 30, 0.8); /* Glassmorphism effect */
+    backdrop-filter: blur(10px);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+    text-align: center;
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Heading - Bus Route */
+.bus-route-title {
+    font-size: 28px;
+    font-weight: bold;
+    text-transform: uppercase;
+    background: linear-gradient(90deg, #ffcc00, #ff5733);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 15px;
+}
+
+/* Bus Details Card */
+.bus-details-card {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+    margin-bottom: 20px;
+}
+
+/* Individual Bus Detail */
+.bus-detail {
+    font-size: 18px;
+    margin: 10px 0;
+    font-weight: 500;
+}
+
+.bus-detail span {
+    font-weight: bold;
+    color: #ffcc00;
+}
+
+/* Bus Timings */
+.timing-title {
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    color: #00c853;
+}
+
+/* Bus Timings List */
+.bus-timings-list {
+    list-style: none;
+    padding: 0;
+}
+
+.bus-timing-item {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 10px;
+    margin: 8px 0;
+    border-radius: 5px;
+    font-size: 18px;
+    transition: transform 0.3s ease-in-out, background 0.3s;
+}
+
+.bus-timing-item:hover {
+    background: #00c853;
+    transform: scale(1.05);
+}
+
+/* Back Button */
+.back-button {
+    background: linear-gradient(45deg, #ff5733, #ffcc00);
+    color: #fff;
+    border: none;
+    padding: 12px 18px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out, transform 0.2s;
+    box-shadow: 0 3px 10px rgba(255, 255, 255, 0.2);
+}
+
+.back-button:hover {
+    background: linear-gradient(45deg, #e64a19, #ffeb3b);
+    transform: translateY(-2px);
+}
+
+/* Loading Text */
+.loading-message {
+    font-size: 22px;
+    color: #ffcc00;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .bus-details-container {
+        width: 95%;
+        padding: 20px;
+    }
+
+    .bus-route-title {
+        font-size: 24px;
+    }
+
+    .bus-detail {
+        font-size: 16px;
+    }
+
+    .bus-timing-item {
+        font-size: 16px;
+    }
+
+    .back-button {
+        font-size: 16px;
+        padding: 10px 16px;
+    }
+}
